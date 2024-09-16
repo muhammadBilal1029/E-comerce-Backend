@@ -18,7 +18,7 @@ router.post('/signup', async (req, res) => {
        }
        if(userType==='Admin' && secretKey!=process.env.SECRETKEY){
         return res.status(400).json({ msg: 'Invalid Secret Key' });
-        
+
        }
         if (!email || email === "null") {
             return res.status(400).json({ msg: 'Invalid email address' });
